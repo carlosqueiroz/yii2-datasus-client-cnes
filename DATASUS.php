@@ -1,12 +1,10 @@
 <?php
 
 namespace silvablack\datasuscnes;
+use silvablack\datasuscnes\SOAP;
 
-use SOAP;
 
-
-class Client{
-
+class DATASUS extends SOAP{
     public $url = [
       'ESTABLISHMENT'=> 'https://servicos.saude.gov.br/cnes/EstabelecimentoSaudeService/v1r0?wsdl',
       'LINK_PROFESSIONAL'=> 'https://servicos.saude.gov.br/cnes/VinculacaoProfissionalService/v1r0?wsdl',
@@ -16,10 +14,17 @@ class Client{
       'CNES'=>'https://servicos.saude.gov.br/cnes/CnesService/v1r0?wsdl'
     ];
 
+    public $options = [
+      'login'=>'CNES.PUBLICO',
+      'password'=>'cnes#2015public'
+    ];
 
-    public function __construct(){
-      $soap = new SOAP(['url'=>$url['CNES']]);
+    public function getCnes(){
+      $call = new SOAP();
+      return $call;
     }
+
+
 
 }
 

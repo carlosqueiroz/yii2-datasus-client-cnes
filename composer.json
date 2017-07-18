@@ -1,7 +1,7 @@
 {
     "name": "silvablack/yii2-datasus-client-cnes",
     "description": "DATASUS CNES Client Consumer for Yii 2",
-    "keywords": ["yii2", "extension", "datasus", "cnes", "consumer"],
+    "keywords": ["yii2", "extension", "datasus", "cnes", "consumer","SOAP","SOAPClient"],
     "homepage": "https://github.com/silvablack/yii2-datasus-client-cnes",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
@@ -17,12 +17,15 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "ext-soap": "*",
-        "yiisoft/yii2": "*"
+        "ext-soap": "*"
     },
     "autoload": {
         "psr-4": {
             "silvablack\\datasuscnes\\": ""
         }
+    },
+    "require-dev": {
+        "yiisoft/yii2": "*",
+        "zendframework/zend-code": "^3.0.4"
     }
 }
